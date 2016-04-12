@@ -15,6 +15,19 @@ body {
     padding: 0;
 }
 
+body:after {
+    background-image: url("https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/12645198_10154556493012738_3794526601586158107_n.jpg?oh=ad58bb3d2a20e43449ef20c3b28b6b50&oe=57731152");
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
 h1, h2 {
     margin: 0;
 }
@@ -47,10 +60,8 @@ nav a {
 
 
 .sidebar {
-    float: left;
     height: 100%;
-    margin:0 0 0 3%;
-    
+    margin: auto auto;
     text-align: center;
     width: 204px;
 }
@@ -89,14 +100,15 @@ nav a {
     background: -moz-linear-gradient(-90deg, rgba(0,0,0,1), rgba(0,0,0,0));
     background: linear-gradient(-90deg, rgba(0,0,0,1), rgba(51,51,51,0));
     color: white;
-    overflow: auto;
     height: 100%;
+    overflow: auto;
     padding: 20px;
+    width: 100%;
 }
 
 .content > main {
-    float: right;
-    max-width: 60%;
+    float: none;
+    max-width: 100%;
 }
 
 .icon {
@@ -128,4 +140,19 @@ nav a {
 
 .twitter {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACnElEQVRYR+2XSWhTURSG/zflJa0ZrImKA8QWh6goKFQQsahY0S4stXXhzkVBEEFwIbhx3omoG0u3ioqpulAQcSFUUaiKSmoNakFUGjOQ1GZ4Sd5w5SodSPOGRIgucjdvkTN85z8DhOkOproIo/axYH2o4VMZNcETvpfZN5CI1Tr5ZJ0atDjTM5AkNSx8Vqo6QF2B/1sBB89AUsyXZP0CAT0BO5rn8iiqBK8jMm4MS0hKGlb7eCQlgkhGLbtsugpwLHBxpxsXXmTwbaK8M424ZakNR1obwZSETxcIFEIwltZw7lkaqlZ+2XUBFjk5XGp3IVskuPIyizc/5FkRBBbo6/DAaStN/8eUqvE2qiAUk/FotFCZAh47i/4O95TT4Ncibo9IiGWnS1nexOP8NqfhHbsXzuPme0nXxnAIT7c5EfDyU84aAd5FZbyKyPicVNDkYHF88xzd4FS9g/fHDQF1ARoFBn4Ph6ObGuEW2aqudTyn4fDDn9UB0Oqu7nGjoBDY+fI9NqOivT/7NFMdAPU6udWJNb7pFpglLP09+CGP4Ih+/6m94Qz4GlicanOCfqt5xx5PGK6wKQA1WOXl0R2wY918oSKG4biCM4NpUx/TU7zdL+LQxgbTQDMNCAFOPEljNKWY+pkC0AgH1jqwd4UdjMVZvBvO45bB7s+ksgRAHehl3N0iYleLaFjV8+9FXB7Kgqpg5VkCWOLisMNvQ3uzCIHTl+HBpzyuhyTQg2X16QLQ9etcaccyDw+XaKz9l3EV10I5hGLmPS8FM1RA5Bi0LhawYaHw+yrOc7DgWAY5mSCaUfExqWBoTEY4UXniSRBLLbAqZzV2dYC6Av9ega478ThHOG81E/zXPhqJMfsHUp0q1P6a/0PWSAwc2/sLoUUlYgoPW8IAAAAASUVORK5CYII=");
+}
+
+@media screen and (min-width: 640px) {
+    .sidebar {
+        float: left;
+        margin: 0 0 0 3%;
+    }
+
+    .content {
+        width: auto;
+    }
+    .content > main {
+        float: right;
+        max-width: 60%;
+    }
 }
