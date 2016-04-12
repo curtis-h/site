@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "ubuntu";
+    src: url("/assets/fonts/Ubuntu-M.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "ubuntu", sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+a {
+    color: #ff4000;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+}
+
+.sidebar {
+    float: left;
+    height: 100%;
+    margin:0 0 0 3%;
+    
+    text-align: center;
+    width: 204px;
+}
+
+.sidebar > * {
+    background-color: #333;
+    margin-bottom: 70px;
+    padding: 20px 20px 10px;
+    position: relative;
+}
+
+.sidebar > *:after {
+    border-color: #333 transparent transparent transparent;
+    border-style: solid;
+    border-width: 60px 102px 0 102px;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0%;
+}
+
+.sidebar > *:before {
+    border-color: transparent #333;
+    border-style: solid;
+    border-width: 60px 102px 0 102px;
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 0%;
+}
+
+h1 {
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+nav a {
+    color: white;
+    display: block;
+}
