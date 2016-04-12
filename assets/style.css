@@ -19,6 +19,12 @@ h1, h2 {
     margin: 0;
 }
 
+h1 {
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
 a {
     color: #ff4000;
     cursor: pointer;
@@ -26,6 +32,19 @@ a {
     transition: color 0.3s;
     -webkit-transition: color 0.3s;
 }
+
+nav a {
+    color: white;
+    display: block;
+}
+
+.red:hover    { color: #ff4000; }
+.orange:hover { color: #ff8000; }
+.yellow:hover { color: #e6e600; }
+.green:hover  { color: #ace600; }
+.blue:hover   { color: #0080ff; }
+.purple:hover { color: #bf00ff; }
+
 
 .sidebar {
     float: left;
@@ -63,15 +82,21 @@ a {
     left: 0%;
 }
 
-h1 {
+.content {
+    background: black;
+    background: -webkit-linear-gradient(-90deg, rgba(0,0,0,1), rgba(0,0,0,0));
+    background: -o-linear-gradient(-90deg, rgba(0,0,0,1), rgba(0,0,0,0));
+    background: -moz-linear-gradient(-90deg, rgba(0,0,0,1), rgba(0,0,0,0));
+    background: linear-gradient(-90deg, rgba(0,0,0,1), rgba(51,51,51,0));
     color: white;
-    font-size: 2rem;
-    text-transform: uppercase;
+    overflow: auto;
+    height: 100%;
+    padding: 20px;
 }
 
-nav a {
-    color: white;
-    display: block;
+.content > main {
+    float: right;
+    max-width: 60%;
 }
 
 .icon {

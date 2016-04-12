@@ -28,5 +28,13 @@
             <a class="icon gmail" href="mailto:ch@curtish.me"></a>
         </footer>
     </section>
+    
+    <section class="content">
+        <header></header>
+        <main>
+            
+        </main>
+        <footer></footer>
+    </section>
 </body>
 </html>
