@@ -17,6 +17,7 @@ body {
 
 body:after {
     background-image: url("https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/12645198_10154556493012738_3794526601586158107_n.jpg?oh=ad58bb3d2a20e43449ef20c3b28b6b50&oe=57731152");
+    background-size: contain;
     content: "";
     position: fixed;
     left: 0;
@@ -95,12 +96,12 @@ nav a {
 
 .content {
     background: black;
-    background: -webkit-linear-gradient(-90deg, rgba(0,0,0,1), rgba(0,0,0,0));
-    background: -o-linear-gradient(-90deg, rgba(0,0,0,1), rgba(0,0,0,0));
-    background: -moz-linear-gradient(-90deg, rgba(0,0,0,1), rgba(0,0,0,0));
-    background: linear-gradient(-90deg, rgba(0,0,0,1), rgba(51,51,51,0));
+    background: -webkit-linear-gradient(-90deg, rgba(0,0,0,1), rgba(0,0,0,0.7), rgba(0,0,0,0));
+    background: -o-linear-gradient(-90deg, rgba(0,0,0,1), rgba(0,0,0,0.7), rgba(0,0,0,0));
+    background: -moz-linear-gradient(-90deg, rgba(0,0,0,1), rgba(0,0,0,0.7), rgba(0,0,0,0));
+    background: linear-gradient(-90deg, rgba(0,0,0,1), rgba(0,0,0,0.7), rgba(51,51,51,0));
     color: white;
-    height: 100%;
+    height: auto;
     overflow: auto;
     padding: 20px;
     width: 100%;
@@ -149,6 +150,7 @@ nav a {
     }
 
     .content {
+        height: 100%;
         width: auto;
     }
     .content > main {
