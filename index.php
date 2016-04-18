@@ -12,7 +12,7 @@
         <header class="sidebar-top">
             <h1>Curtis<br>Harding</h1>
         </header>
-        
+
         <nav class="sidebar-bottom">
             <a class="red" href="#about">About</a>
             <a class="orange" href="#tech">Tech</a>
@@ -21,14 +21,14 @@
             <a class="blue" href="#d&d">D&amp;D</a>
             <a class="purple" href="#mtb">Mtb</a>
         </nav>
-        
+
         <footer>
             <a class="icon twitter" href="https://twitter.com/curtis_h"></a>
             <a class="icon github" href="https://github.com/curtis-h"></a>
             <a class="icon gmail" href="mailto:ch@curtish.me"></a>
         </footer>
     </section>
-    
+
     <section class="content">
         <main>
             <div>
@@ -40,7 +40,7 @@
                 <p>I also run <a href="#urbangames">Bristol Urban Games</a>. A monthly meetup in the centre of Bristol where we provide a gamified reason for people to meet, run about and have fun.</p>
                 <p>I DM a weekly D&D group for my friends, which is great fun. You can read about their hilarious exploits <a href="#d&d">here</a>.</p>
             </div>
-            
+
             <div>
                 <a name="tech"></a>
                 <h2>Tech</h2>
@@ -48,17 +48,17 @@
                 <p>My core skills include PHP, Javascript, MySQL, bash and RHEL as these are what I use in work. For hacks and personal projects I always try to use different tech and new things and as such have played with and am competent with a much larger group of technologies.</p>
                 <p>On top of that I have played with a lot of tech and api's, either in hackathons or personal projects, a small list of these would be: </p>
             </div>
-            
+
             <div>
                 <a name="hackference"></a>
                 <h2>Hackference</h2>
                 <p>
-                    Is a 3 day event focused on inspiring people to learn and build. 
+                    Is a 3 day event focused on inspiring people to learn and build.
                     Hackference consists of a single day two track conference, and a two day hackathon.
                     This is our fourth year
                 </p>
             </div>
-            
+
             <div>
                 <a name="urbangames"></a>
                 <h2>Urban Games</h2>
@@ -67,13 +67,29 @@
                     Our games involve a mixture of running and puzzle solving and are a great way to have some fun outside once a month.
                 </p>
             </div>
-            
+
             <div>
                 <a name="d&d"></a>
                 <h2>D&amp;D</h2>
-                <p></p>
+                <p>
+                    So fifth edition came out and me and some friends decided to start a group. I hadn't played D&D in years, but as the only person in the group who had any previous experience it fell on me to take the reins as DM once again.<br>
+                    After rolling characters our group consists of:
+                </p>
+                <ul>
+                    <li>Me - DM</li>
+                    <li>Althalus - High elf Rogue</li>
+                    <li>Barrington - Half elf Bard</li>
+                    <li>Bowser Wrex - Dragonborn Monk</li>
+                    <li>Cora - Halfling Rogue</li>
+                    <li>Frostbeard - Dwarf Cleric</li>
+                    <li>Ridicul - Gnome Wizard</li>
+                    <li>Trent Powerbeard - Dwarf Fighter</li>
+                </ul>
+                <p>
+                    We started with the starter set (where else?) a great introduction to the game for both player and DM alike and things were going fine until Cragmaw castle. The group approached the main doorway up the stairs and got caught flat footed by the sentries posted in the archer towers. 
+                </p>
             </div>
-            
+
             <div>
                 <a name="mtb"></a>
                 <h2>Mtb</h2>
