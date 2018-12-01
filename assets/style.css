@@ -21,6 +21,11 @@ canvas {
   text-shadow: 0 .05rem 2rem rgba(255, 255, 255, 1);
   z-index: 13;
 }
+.subtitle {
+  font-size: 0.25em;
+  margin: 0;
+  padding: 0;
+}
 .shape {
   background: black;
   position: absolute;
