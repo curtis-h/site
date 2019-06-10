@@ -1,0 +1,25 @@
+{
+  "name": "curtish",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "tsc": "tsc",
+    "build": "npm run tsc",
+    "watch": "npm run tsc -- -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/curtis-h/site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/curtis-h/site/issues"
+  },
+  "homepage": "https://github.com/curtis-h/site#readme",
+  "dependencies": {
+    "typescript": "^3.5.1"
+  }
+}

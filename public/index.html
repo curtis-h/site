@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <title>curtis.h</title>
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  <link href="assets/style.css" rel="stylesheet">
+  <script type="text/javascript" src="assets/almond.js"></script>
+</head>
+<body>
+  <div id="title" class="container title">CURTIS.H
+    <p class="subtitle">work in progress</p>
+  </div>
+  <canvas id="canvas"></canvas>
+  <script type="text/javascript" src="bundle.js"></script>
+  <script type="text/javascript">
+    window.addEventListener("load", (event) => requirejs(['init'], (App) => App.init()));
+  </script>
+</body>
+</html>
