@@ -1,5 +1,5 @@
 export default abstract class Canvas {
-  private readonly fps = 30;
+  private readonly fps = 60;
   private readonly frameInterval = 1000 / this.fps;
   protected startTime = 0;
   protected time = 0;

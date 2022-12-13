@@ -6,7 +6,7 @@ define("canvas/canvas", ["require", "exports"], function (require, exports) {
     Object.defineProperty(exports, "__esModule", { value: true });
     class Canvas {
         constructor() {
-            this.fps = 30;
+            this.fps = 60;
             this.frameInterval = 1000 / this.fps;
             this.startTime = 0;
             this.time = 0;
@@ -157,11 +157,64 @@ define("canvas/circle", ["require", "exports", "canvas/canvas"], function (requi
     }
     exports.default = Circle;
 });
-define("canvas/fractalTree", ["require", "exports", "canvas/canvas"], function (require, exports, canvas_3) {
+define("canvas/dots", ["require", "exports", "canvas/canvas"], function (require, exports, canvas_3) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     canvas_3 = __importDefault(canvas_3);
-    class FractalTree extends canvas_3.default {
+    class Dots extends canvas_3.default {
+        constructor() {
+            super();
+            this.context.fillStyle = "black";
+            this.dots = [];
+            for (let i = 0; i < 100; i += 1) {
+                const dot = {
+                    x: (Math.random() - 0.5) * this.bounds.width,
+                    y: (Math.random() - 0.5) * this.bounds.height,
+                    z: Math.random() * this.bounds.width,
+                    theta: Math.random() * Math.PI * 2,
+                    phi: Math.acos((Math.random() * 2) - 1),
+                    vx: 0,
+                    vy: 0
+                };
+                this.dots.push(dot);
+            }
+        }
+        render() {
+            const ctx = this.context;
+            const perspective = this.bounds.width * 0.6;
+            const radius = this.bounds.width / 2;
+            ctx.fillStyle = "rgba(255, 255, 255, 0.1)";
+            ctx.fillRect(0, 0, this.bounds.width, this.bounds.height);
+            ctx.fillStyle = "red";
+            ctx.strokeStyle = "black";
+            ctx.beginPath();
+            this.dots.forEach(dot => {
+                const oldx = dot.x;
+                const oldy = dot.y;
+                dot.theta += 0.012;
+                dot.phi += 0.001;
+                dot.x = radius * Math.sin(dot.phi) * Math.cos(dot.theta);
+                dot.y = radius * Math.cos(dot.phi);
+                dot.z = radius * Math.sin(dot.phi) * Math.sin(dot.theta) + radius;
+                const scale = perspective / (perspective + dot.z);
+                const x = (dot.x * scale) + this.bounds.width / 2;
+                const y = (dot.y * scale) + this.bounds.height / 2;
+                const prevx = (oldx * scale) + this.bounds.width / 2;
+                const prevy = (oldy * scale) + this.bounds.height / 2;
+                ctx.globalAlpha = Math.abs(1 - dot.z / this.bounds.width);
+                ctx.moveTo(prevx, prevy);
+                ctx.lineTo(x, y);
+            });
+            ctx.stroke();
+        }
+    }
+    exports.default = Dots;
+});
+define("canvas/fractalTree", ["require", "exports", "canvas/canvas"], function (require, exports, canvas_4) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    canvas_4 = __importDefault(canvas_4);
+    class FractalTree extends canvas_4.default {
         constructor() {
             super();
             const lineSize = 5 + Math.random() * 20;
@@ -202,20 +255,12 @@ define("canvas/fractalTree", ["require", "exports", "canvas/canvas"], function (
     }
     exports.default = FractalTree;
 });
-define("init", ["require", "exports", "canvas/attractors", "canvas/circle", "canvas/fractalTree"], function (require, exports, attractors_1, circle_1, fractalTree_1) {
+define("init", ["require", "exports", "canvas/dots"], function (require, exports, dots_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    attractors_1 = __importDefault(attractors_1);
-    circle_1 = __importDefault(circle_1);
-    fractalTree_1 = __importDefault(fractalTree_1);
+    dots_1 = __importDefault(dots_1);
     exports.init = () => {
-        const rng = Math.floor(Math.random() * 3) + 1;
-        switch (rng) {
-            case 3: return new fractalTree_1.default().start();
-            case 2: return new circle_1.default().start();
-            case 1:
-            default: return new attractors_1.default().start();
-        }
+        new dots_1.default().start();
     };
 });
 //# sourceMappingURL=bundle.js.map
